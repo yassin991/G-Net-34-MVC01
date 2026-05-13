@@ -1,3 +1,5 @@
+using MVC_Assignment01.DbContexts;
+
 namespace MVC_Assignment01
 {
     public class Program
@@ -8,8 +10,8 @@ namespace MVC_Assignment01
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
-            var app = builder.Build();
+            builder.Services.AddDbContext<GYMDbContext>();
+           var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
