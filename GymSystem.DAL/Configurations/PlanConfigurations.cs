@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using MVC_Assignment01.Models;
+﻿using GymSystem.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace MVC_Assignment01.Configurations
+namespace Configurations
 {
     public class PlanConfigurations : IEntityTypeConfiguration<Plan>
     {
@@ -18,5 +18,6 @@ namespace MVC_Assignment01.Configurations
                 Tb.HasCheckConstraint("PlanDurationCheck", "DurationDays Between 1 and 365");
             });
         }
+
     }
 }

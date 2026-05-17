@@ -1,4 +1,6 @@
-using MVC_Assignment01.DbContexts;
+using GymSystem.DAL.Contexts;
+using GymSystem.DAL.Repositories.Classes;
+using GymSystem.DAL.Repositories.Interfaces;
 
 namespace MVC_Assignment01
 {
@@ -11,6 +13,8 @@ namespace MVC_Assignment01
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<GYMDbContext>();
+            builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+            
            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
