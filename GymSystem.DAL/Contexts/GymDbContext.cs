@@ -11,17 +11,22 @@ namespace GymSystem.DAL.Contexts
 {
     public class GYMDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer("Server=.;Database=EventHubDB;Trusted_Connection=True;TrustServerCertificate=True;");
+        //}
+        public GYMDbContext(DbContextOptions<GYMDbContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=EventHubDB;Trusted_Connection=True;TrustServerCertificate=True;");
+
         }
-  
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration<Plan>(new Configurations.PlanConfigurations());
+            modelBuilder.ApplyConfigurationsFromAssembly(
+       typeof(GYMDbContext).Assembly);
 
         }
         
         public DbSet<Plan> Plans { get; set; }
+        public IQueryable<object> Members { get; internal set; }
     }
 }

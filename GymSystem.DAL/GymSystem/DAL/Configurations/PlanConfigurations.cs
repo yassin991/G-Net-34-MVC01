@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace GymSystemG03.DAL.Configurations
+namespace GymSystem.DAL.Configurations
 {
     public class PlanConfigurations : IEntityTypeConfiguration<Plan>
     {
@@ -17,9 +17,7 @@ namespace GymSystemG03.DAL.Configurations
 
             builder.ToTable(tb =>
             {
-                tb.HasCheckConstraint(
-    "DurationCheckValue",
-    "DurationDays BETWEEN 1 AND 365");
+                tb.HasCheckConstraint("DurationCheckValue", "Duration Between 1 and 365");
             });
 
         }

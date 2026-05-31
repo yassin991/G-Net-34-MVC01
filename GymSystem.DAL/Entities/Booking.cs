@@ -10,13 +10,13 @@ namespace GymSystem.DAL.Entities
     {
         public Member Member { get; set; } = null!;
 
-        int MemberId { get; set; }
+        public int MemberId { get; set; }
 
-        Session Session { get; set; } = null!;
+        public Session Session { get; set; } = null!;
 
-        int SessionId { get; set; }
+        public int SessionId { get; set; }
 
-        bool IsAttended { get; set; }
+        public  bool IsAttended { get; set; }
 
     }
 }

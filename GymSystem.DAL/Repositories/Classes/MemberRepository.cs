@@ -11,14 +11,14 @@ using System.Threading.Tasks;
 
 namespace GymSystem.DAL.Repositories.Classes
 {
-    public class PlanRepository :GenericRepository<Plan>, IPlanRepository
+    public class MemberRepository :GenericRepository<Member>, IMemberRepository
     {
-
-        private readonly GYMDbContext dbContext ;
-        public PlanRepository(GYMDbContext _dbContext):base (_dbContext)
+        private readonly GYMDbContext dbContext;
+        public MemberRepository(GYMDbContext _dbContext):base(_dbContext)
         {
-            dbContext = _dbContext;
+            this.dbContext = _dbContext;
         }
-     
+       
+       
     }
 }

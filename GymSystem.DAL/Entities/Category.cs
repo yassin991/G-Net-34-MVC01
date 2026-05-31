@@ -11,5 +11,6 @@ namespace GymSystem.DAL.Entities
         public string CategoryName { get; set; } = null!;
 
         public ICollection<Session> Sessions { get; set; } = new HashSet<Session>();
+        public int Id { get; internal set; }
     }
 }
