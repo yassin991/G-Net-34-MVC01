@@ -17,9 +17,7 @@ namespace GymSystemG03.DAL.Configurations
 
             builder.ToTable(tb =>
             {
-                tb.HasCheckConstraint(
-    "DurationCheckValue",
-    "DurationDays BETWEEN 1 AND 365");
+                tb.HasCheckConstraint("DurationCheckValue", "[DurationDays] BETWEEN 1 AND 365");
             });
 
         }

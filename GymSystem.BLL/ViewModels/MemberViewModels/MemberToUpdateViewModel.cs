@@ -10,7 +10,8 @@ namespace GymSystem.BLL.ViewModels.MemberViewModels
 {
     public class MemberToUpdateViewModel
     {
-        internal readonly object HealthRecordViewModel;
+        public HealthRecordViewModel HealthRecordViewModel { get; set; }
+      = new HealthRecordViewModel();
         [Required]
         public DateOnly DateOfBirth { get; set; }
 

@@ -1,3 +1,5 @@
+using GymSystem.BLL.Services.Classes;
+using GymSystem.BLL.Services.Interfaces;
 using GymSystem.DAL.Contexts;
 using GymSystem.DAL.Entities;
 using GymSystem.DAL.Repositories.Classes;
@@ -19,9 +21,10 @@ namespace MVC_Assignment01
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
-            builder.Services.AddScoped(typeof(IGenericrepository<>), typeof(GenericRepository<>));
-            
-           var app = builder.Build();
+          //  builder.Services.AddScoped(typeof(IGenericrepository<>), typeof(GenericRepository<>));
+            builder.Services.AddScoped<IMemberServices, MemberServices>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

@@ -28,7 +28,7 @@ namespace GymSystem.DAL.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Plans", x => x.Id);
-                    table.CheckConstraint("DurationCheckValue", "Duration Between 1 and 365");
+                    table.CheckConstraint("DurationCheckValue", "DurationDays Between 1 and 365");
                 });
         }
 
