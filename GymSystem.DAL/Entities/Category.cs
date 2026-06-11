@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GymSystem.DAL.Entities
+{
+    public class Category
+    {
+        public string CategoryName { get; set; } = null!;
+
+        public ICollection<Session> Sessions { get; set; } = new HashSet<Session>();
+        public int Id { get; internal set; }
+    }
+}

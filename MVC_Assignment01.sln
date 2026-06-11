@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36915.13 d17.14
+VisualStudioVersion = 17.14.36915.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC_Assignment01", "MVC_Assignment01\MVC_Assignment01.csproj", "{D1D4612A-5DF8-4325-8F24-A62A538C89DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymSystem.DAL", "GymSystem.DAL\GymSystem.DAL.csproj", "{66BBD63C-1F5B-4210-BADC-D74B9314679B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymSystem.BLL", "GymSystem.BLL\GymSystem.BLL.csproj", "{B86A4BF0-503D-479E-84D4-5AB4E07A7510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D1D4612A-5DF8-4325-8F24-A62A538C89DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1D4612A-5DF8-4325-8F24-A62A538C89DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1D4612A-5DF8-4325-8F24-A62A538C89DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66BBD63C-1F5B-4210-BADC-D74B9314679B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66BBD63C-1F5B-4210-BADC-D74B9314679B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66BBD63C-1F5B-4210-BADC-D74B9314679B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66BBD63C-1F5B-4210-BADC-D74B9314679B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B86A4BF0-503D-479E-84D4-5AB4E07A7510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86A4BF0-503D-479E-84D4-5AB4E07A7510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86A4BF0-503D-479E-84D4-5AB4E07A7510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86A4BF0-503D-479E-84D4-5AB4E07A7510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,12 @@
+using GymSystem.BLL.Services.Classes;
+using GymSystem.BLL.Services.Interfaces;
+using GymSystem.DAL.Contexts;
+using GymSystem.DAL.Entities;
+using GymSystem.DAL.Repositories.Classes;
+using GymSystem.DAL.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+
 namespace MVC_Assignment01
 {
     public class Program
@@ -8,7 +17,13 @@ namespace MVC_Assignment01
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddDbContext<GYMDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
+          //  builder.Services.AddScoped(typeof(IGenericrepository<>), typeof(GenericRepository<>));
+            builder.Services.AddScoped<IMemberServices, MemberServices>();
+            builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
